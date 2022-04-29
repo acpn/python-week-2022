@@ -1,5 +1,5 @@
 from typing import Optional
-from sqlmodel import SQLModel, Field, select
+from sqlmodel import SQLModel, Field
 from pydantic import validator
 from statistics import mean
 from datetime import datetime
@@ -28,4 +28,4 @@ class Beer(SQLModel, table=True):
         return int(rate)
 
 
-brewdog = Beer(name="Brewdog", style="NEIPA", flavor=5, image=8, cost=8)
+beer = Beer(name="Lagunitas", style="IPA", flavor=3, image=6, cost=8)
